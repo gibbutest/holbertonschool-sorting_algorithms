@@ -29,10 +29,10 @@ void insertion_sort_list(listint_t **list)
 
 			tmp->prev = prev->prev;
 			prev->next = tmp->next;
-			
+
 			if (tmp->next)
 				tmp->next->prev = prev;
-			
+
 			tmp->next = prev;
 			prev->prev = tmp;
 
