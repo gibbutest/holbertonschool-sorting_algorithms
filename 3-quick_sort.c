@@ -5,7 +5,8 @@
  * @a: The first pointer
  * @b: The second pointer
  */
-void swap(int *a, int *b) {
+void swap(int *a, int *b)
+{
 	int t = *a;
 	*a = *b;
 	*b = t;
@@ -17,6 +18,8 @@ void swap(int *a, int *b) {
  * @low: The lowest point
  * @high: The highest point
  * @size: The size of the array
+ *
+ * Return: The resulting number
  */
 int partition(int array[], int low, int high, size_t size)
 {
@@ -29,7 +32,7 @@ int partition(int array[], int low, int high, size_t size)
 		if (array[j] <= pivot)
 		{
 			i++;
-			
+
 			swap(&array[i], &array[j]);
 
 			if (i != j)
@@ -41,7 +44,7 @@ int partition(int array[], int low, int high, size_t size)
 
 	if (i + 1 != high)
 		print_array(array, size);
-	
+
 	return (i + 1);
 }
 
@@ -57,6 +60,7 @@ void quickSort(int array[], int low, int high, size_t size)
 	if (low < high)
 	{
 		int pi = partition(array, low, high, size);
+
 		quickSort(array, low, pi - 1, size);
 		quickSort(array, pi + 1, high, size);
 	}
