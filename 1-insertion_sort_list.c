@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  * insertion_sort_list - Sort a list in ascending order
  * @list: Pointer to the list
